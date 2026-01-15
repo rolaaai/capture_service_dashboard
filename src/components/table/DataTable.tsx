@@ -1,6 +1,5 @@
 // src/components/table/DataTable.tsx
 import TableRow from './TableRow';
-import { KeyboardArrowRight } from '@mui/icons-material';
 
 const data = [
   {
@@ -20,37 +19,40 @@ const data = [
 ];
 
 const DataTable = () => (
-  <div className="bg-white border border-gray-200 rounded-md  ">
-    <table className="min-w-full">
-      <thead>
-        <tr className="bg-gray-100 rounded-xl">
-          <th className="p-3 text-left text-xs font-semibold text-gray-500">ID</th>
-          <th className="p-3 text-left text-xs font-semibold text-gray-500">Platform</th>
-          <th className="p-3 text-left text-xs font-semibold text-gray-500">Recording Length</th>
-          <th className="p-3 text-left text-xs font-semibold text-gray-500">Status</th>
-          <th className="p-3 text-left text-xs font-semibold text-gray-500">Date</th>
-          <th className="p-3 text-left text-xs font-semibold text-gray-500">Action</th>
-        </tr>
-      </thead>
-      <tbody>
-        {data.map((row) => (
-          <TableRow key={row.id} {...row} />
-        ))}
-      </tbody>
-    </table>
+  <div className="bg-card border border-default rounded-md">
+    {/* Table scroll wrapper for mobile */}
+    <div className="table-scroll">
+      <table className="min-w-full">
+        <thead>
+          <tr className="bg-header rounded-xl">
+            <th className="p-3 text-left text-xs font-semibold text-secondary whitespace-nowrap">ID</th>
+            <th className="p-3 text-left text-xs font-semibold text-secondary whitespace-nowrap">Platform</th>
+            <th className="p-3 text-left text-xs font-semibold text-secondary whitespace-nowrap">Recording Length</th>
+            <th className="p-3 text-left text-xs font-semibold text-secondary whitespace-nowrap">Status</th>
+            <th className="p-3 text-left text-xs font-semibold text-secondary whitespace-nowrap">Date</th>
+            <th className="p-3 text-left text-xs font-semibold text-secondary whitespace-nowrap">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          {data.map((row) => (
+            <TableRow key={row.id} {...row} />
+          ))}
+        </tbody>
+      </table>
+    </div>
     {/* Footer */}
-    <div className="flex items-center justify-between px-4 py-2 text-xs text-gray-500">
+    <div className="flex items-center justify-between px-4 py-2 text-xs text-secondary">
       <span>1-2 of 2 results</span>
       <div className="flex space-x-2">
-        <button className="border border-gray-200 rounded-md px-2 py-1 bg-white text-gray-400 ">
+        <button className="border border-default rounded-md px-2 py-1 bg-card text-muted ">
           <span className="sr-only">Previous</span>
           {/* Left arrow */}
-          <svg width="20" height="20" fill="none"><path d="M13 7l-3 3 3 3" stroke="#9ca3af" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          <svg width="20" height="20" fill="none"><path d="M13 7l-3 3 3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
         </button>
-        <button className="border border-gray-200 rounded-md px-2 py-1 bg-white text-gray-400 ">
+        <button className="border border-default rounded-md px-2 py-1 bg-card text-muted ">
           <span className="sr-only">Next</span>
           {/* Right arrow */}
-          <svg width="20" height="20" fill="none"><path d="M7 7l3 3-3 3" stroke="#9ca3af" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/></svg>
+          <svg width="20" height="20" fill="none"><path d="M7 7l3 3-3 3" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
         </button>
       </div>
     </div>
