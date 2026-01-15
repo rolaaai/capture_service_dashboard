@@ -1,0 +1,121 @@
+/* 
+ * Centralized Theme System
+ * ========================
+ * This file contains all color tokens and design variables.
+ * Change colors here to reflect across the entire application.
+ * 
+ * Color Palette:
+ * - White (#FFFFFF) - Primary backgrounds, cards
+ * - Snow White (#FFFAFA) - Page backgrounds, subtle surfaces
+ * - Light Blue (#ADD8E6) - Highlights, badges, focus states
+ * - Slate Gray (#6D8196) - Secondary text, icons
+ * - Navy Blue (#000080) - Primary actions, links
+ */
+
+@theme {
+  /* ============================================
+   * PRIMARY COLORS
+   * ============================================ */
+  --color-primary: #000080;           /* Navy Blue - Primary actions */
+  --color-primary-light: #1a1a99;     /* Lighter navy for hover states */
+  --color-primary-dark: #000066;      /* Darker navy for active states */
+
+  /* ============================================
+   * ACCENT COLORS
+   * ============================================ */
+  --color-accent: #ADD8E6;            /* Light Blue - Highlights */
+  --color-accent-light: #c5e3ef;      /* Lighter blue for subtle accents */
+  --color-accent-dark: #8fc4d8;       /* Darker blue for emphasis */
+
+  /* ============================================
+   * NEUTRAL COLORS
+   * ============================================ */
+  --color-white: #FFFFFF;             /* Pure white */
+  --color-snow: #FFFAFA;              /* Snow white - subtle warmth */
+  --color-slate: #6D8196;             /* Slate gray - secondary elements */
+  --color-slate-light: #8a9aab;       /* Lighter slate */
+  --color-slate-dark: #556274;        /* Darker slate */
+
+  /* ============================================
+   * BACKGROUND COLORS
+   * ============================================ */
+  --bg-page: #FFFAFA;                 /* Main page background - Snow white */
+  --bg-card: #FFFFFF;                 /* Cards, panels, modals */
+  --bg-surface: #FFFAFA;              /* Elevated surfaces */
+  --bg-hover: #f5f5f8;                /* Hover state background */
+  --bg-active: #eef2f6;               /* Active/pressed state */
+  --bg-muted: #f8f9fb;                /* Muted/disabled backgrounds */
+  --bg-input: #FFFAFA;                /* Input field background */
+  --bg-header: #f5f7fa;               /* Table headers, section headers */
+
+  /* ============================================
+   * TEXT COLORS
+   * ============================================ */
+  --text-primary: #1a1a2e;            /* Primary text - dark for readability */
+  --text-secondary: #6D8196;          /* Secondary text - Slate gray */
+  --text-muted: #8a9aab;              /* Muted/disabled text */
+  --text-inverse: #FFFFFF;            /* Text on dark backgrounds */
+  --text-link: #000080;               /* Link text - Navy blue */
+  --text-link-hover: #1a1a99;         /* Link hover state */
+
+  /* ============================================
+   * BORDER COLORS
+   * ============================================ */
+  --border-subtle: #eef2f6;           /* Subtle borders */
+  --border-default: #e2e8f0;          /* Default borders */
+  --border-strong: #cbd5e1;           /* Emphasized borders */
+  --border-focus: #ADD8E6;            /* Focus ring color - Light blue */
+
+  /* ============================================
+   * STATUS COLORS
+   * ============================================ */
+  /* Success */
+  --color-success: #10b981;
+  --color-success-bg: #d1fae5;
+  --color-success-text: #065f46;
+  
+  /* Warning */
+  --color-warning: #f59e0b;
+  --color-warning-bg: #fef3c7;
+  --color-warning-text: #92400e;
+  
+  /* Error */
+  --color-error: #ef4444;
+  --color-error-bg: #fee2e2;
+  --color-error-text: #991b1b;
+  
+  /* Info */
+  --color-info: #ADD8E6;
+  --color-info-bg: #e0f2fe;
+  --color-info-text: #0369a1;
+
+  /* ============================================
+   * BADGE / TAG COLORS
+   * ============================================ */
+  --badge-primary-bg: #e0e7ff;
+  --badge-primary-text: #000080;
+  --badge-accent-bg: #d4edee;
+  --badge-accent-text: #1e6b6d;
+  --badge-neutral-bg: #f1f5f9;
+  --badge-neutral-text: #6D8196;
+
+  /* ============================================
+   * INTERACTIVE STATES
+   * ============================================ */
+  --focus-ring: 0 0 0 2px #FFFFFF, 0 0 0 4px #ADD8E6;
+  --hover-overlay: rgba(109, 129, 150, 0.08);
+  --active-overlay: rgba(109, 129, 150, 0.12);
+
+  /* ============================================
+   * SHADOWS
+   * ============================================ */
+  --shadow-sm: 0 1px 2px 0 rgba(109, 129, 150, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(109, 129, 150, 0.1);
+  --shadow-lg: 0 10px 15px -3px rgba(109, 129, 150, 0.1);
+
+  /* ============================================
+   * SCROLLBAR COLORS
+   * ============================================ */
+  --scrollbar-thumb: #cbd5e1;
+  --scrollbar-track: transparent;
+}
